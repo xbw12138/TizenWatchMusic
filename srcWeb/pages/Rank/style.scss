@@ -1,0 +1,65 @@
+@import '../../common/scss/variable.scss';
+
+.hide-page-rank {
+  display: none;
+}
+
+.page-rank {
+  position: fixed;
+  top: 95px;
+  left: 10%;
+  bottom: 80px;
+  width: 100%;
+  z-index: 0;
+  overflow-y: scroll;
+}
+
+.rank-container {
+  box-sizing: border-box;
+  padding: 0 calc((100% - 900px) / 2);
+  margin: 0;
+  height: calc(100vh - 175px);
+
+  li {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px;
+    font-size: $font-size-l;
+    cursor: pointer;
+
+    &:hover {
+      .name {
+        color: $color-theme;
+      }
+    }
+
+    p {
+      float: left;
+      margin-bottom: 5px;
+      width: 100%;
+      color: $color-text-gray;
+    }
+
+    .name {
+      font-size: $font-size-xl;
+      color: $color-text;
+      transition: all 0.3s;
+      line-height: 18px;
+    }
+
+    .img-container {
+      width: 130px;
+      height: 130px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border-radius: 5px;
+
+      img {
+        width: 130px;
+        min-height: 130px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
